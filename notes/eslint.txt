@@ -1,0 +1,45 @@
+ESLint
+
+1. bisa buat project baru / pakai project yang sudah ada
+2. untuk setup eslint : `npx eslint --init`
+3. nanti akan memilih pilihan
+   1. How would you like to use ESLint
+      3. To check syntax, find problems, and enforce code style
+   2. What type of modules does your project use?
+      - kalau seperti react & next bisa memilih : (Karena menggunakan import from)
+        1. Javascript modules (import/export) 
+      - Kalau masih menggunakan require bisa memilih
+        2. CommonJS (require/exports)
+      - None of these kalau menggunakan frontend sederhana tanpa import / require
+   3. Framework ?
+      - React / Vue
+      - Karena pakai express bisa pakai yg None of these
+   4. use Typescript ?
+      - No
+   5. where does your code run 
+      - karena express berarti pilih:
+        2. Node
+      - kalau react / next bisa dipilih browser
+   6. style for your project ?
+      - Use a popular style guide
+        - airbnb 
+   7. format config
+      - Javascript
+   8. would you like to install : yes
+   9. package manager : disesuaikan (npm / yarn)
+4. di package.json tambahkan scripts untuk melakukan linting
+    "lint" : "eslint ./app/**",
+    "lint:fix" : "eslint --fix ./app/**" 
+5. bisa di coba diterminal
+   - npm run lint (untuk linting saja)
+   - npm run lint:fix (untuk linting + fixing otomatis kalau bisa di fix oleh eslint)
+6. menambahkan extensi untuk visual studio code
+   - buka tab extensions (ctrl+shift+x)
+   - cari eslint dan install
+7. buka .eslintrc.js 
+   di rules tambahkan 'class-methods-use-this': 'off'
+
+
+Tips :
+untuk membuka visual studio code di terminal sesuai folder yang kita sedang buka 
+bisa mengetikan `code .` di terminal
