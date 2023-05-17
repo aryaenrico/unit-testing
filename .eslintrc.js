@@ -1,8 +1,8 @@
 module.exports = {
   env: {
     node: true,
-    commonjs: true,
-    es2021: true,
+    // commonjs: true,
+    // es2021: true,
   },
   extends: 'airbnb-base',
   overrides: [
@@ -12,5 +12,6 @@ module.exports = {
   },
   rules: {
     'class-methods-use-this': 'off',
+    'linebreak-style': ['error', 'windows'],
   },
 };

@@ -12,13 +12,13 @@ let token; let
 const decodeToken = (token) => jwt.verify(token, JWT_SIGNATURE_KEY);
 
 const user = {
-  name: 'test123',
-  email: 'test123@test.com',
-  password: '123456',
+  name: "test123",
+  email: "test123@test.com",
+  password: "123456",
 };
 
 beforeAll(() => {
-  server = app.listen(1337);
+  server = app.listen(1338);
 });
 
 // register
