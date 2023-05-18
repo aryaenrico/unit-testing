@@ -10,7 +10,7 @@ beforeAll(() => {
 });
 
 describe('activity on car ', () => {
-  it('success get car ', async() => {
+  it('success get car ', async () => {
     const response = await request(server)
       .get('/v1/cars')
       .set('Accept', 'application/json');
@@ -21,13 +21,9 @@ describe('activity on car ', () => {
     expect(response.body).toHaveProperty('meta.pagination.pageSize');
     expect(response.body).toHaveProperty('meta.pagination.count');
   });
-
-  it('success deleted car',async () => {
-
-  });
 });
 
 afterAll(async () => {
-   models.sequelize.close();
-   server.close();
+  models.sequelize.close();
+  server.close();
 });
